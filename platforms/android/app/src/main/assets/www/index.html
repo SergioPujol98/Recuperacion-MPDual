@@ -16,13 +16,12 @@
     <script type="text/javascript">
 
     function removeItem(){
-
-    var ul = document.getElementById("myList");
-    var candidate = document.getElementById("candidate");
-    
-    var item = document.getElementById(candidate.value);
-    alert(item);
-    ul.removeChild(item);
+    //var ul = document.getElementById("myList");
+    //var candidate = document.getElementById("candidate");
+    //var item = document.getElementById(candidate.value);
+    //ul.removeChild(item);
+    var list = document.getElementById("myList");
+    list.removeChild(list.childNodes[0]);
 }
 
 
@@ -55,8 +54,6 @@
             <div class="ui-content" role="main">
                  <a href="./crear.html" id="download-button" class="btn-large waves-effect waves-light orange">Nuevo Usuario</a>
                  <a id="download-button" onclick="fn2()" class="btn-large waves-effect waves-light orange">Actualizar Usuarios</a>
-
-                 <input type="text" id="candidate"/>
 
                  <a id="download-button" onclick="removeItem()" class="btn-large waves-effect waves-light orange">Eliminar contacto</a>
             </div>

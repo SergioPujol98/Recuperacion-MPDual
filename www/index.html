@@ -18,15 +18,29 @@
       var vNumber = localStorage.getItem("number");
       var vRelationship = localStorage.getItem("rlship");
 
-    
+      var ul = document.getElementById("dynamic-list");
+      var candidate = "vName";
+      var li = document.createElement("li");
+      li.setAttribute('id',vName.value);
+      li.appendChild(document.createTextNode(vName.value));
+      ul.appendChild(li);
 
-    alert("Valores: " +vName);
+      alert("Valores: " +vName);
 
       
     }
     </script>
 
-    
+    <script type="text/javascript">
+    function addItem(){
+    var ul = document.getElementById("dynamic-list");
+    var candidate = document.getElementById(vName);
+    var li = document.createElement("li");
+    li.setAttribute('id',candidate.value);
+    li.appendChild(document.createTextNode(candidate.value));
+    ul.appendChild(li);
+    }
+    </script>
 
 </head>
 <body>
@@ -35,13 +49,7 @@
                 <h2>Agenda</h2>
             </div>
 
-            <div class="w3-container">
-                <ul class="w3-ul w3-card-4">
-                    <li class="w3-display-container">{{vName}} <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right">&times;</span></li>
-                    <li class="w3-display-container">Adam <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right">&times;</span></li>
-                    <li class="w3-display-container">Eve <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right">&times;</span></li>
-                </ul>
-            </div>
+            <ul id="dynamic-list"></ul>
             
             <div class="ui-content" role="main">
                  <a href="./crear.html" id="download-button" class="btn-large waves-effect waves-light orange">Nuevo Usuario</a>

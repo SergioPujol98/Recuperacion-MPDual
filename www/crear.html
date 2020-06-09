@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>\
+
+  <script type="text/javascript">
+    function fn1() {
+
+      var x1 = document.getElementById("inputName").value;
+    // guardar datos
+      localStorage.setItem("nombre", x1);
+
+      var x2 = document.getElementById("inputLName").value;
+    // guardar datos
+      localStorage.setItem("lastName", x2);
+
+      var x3 = document.getElementById("inputNumber").value;
+    // guardar datos
+      localStorage.setItem("number", x3);
+
+      var x4 = document.getElementById("inputRlShip").value;
+    // guardar datos
+      localStorage.setItem("rlship", x4);
+
+      alert("Valores: " +x1 + x2 + x3 + x4);
+
+    }
+  </script>
+</head>
+
+
+<body>
+
+<div class="w3-container w3-blue">
+  <h2>Datos de Usuario</h2>
+</div>
+
+<form class="w3-container">
+
+  <p>
+  <label>First Name</label>
+  <input class="w3-input" id="inputName" type="text"></p>
+  <script type="text/javascript">
+
+    // leer datos
+    var vName = localStorage.getItem("nombre");
+  </script>
+
+  <p>
+  <label>Last Name</label>
+  <input class="w3-input" id="inputLName" type="text"></p>
+  <script type="text/javascript">
+
+
+    // leer datos
+    var vLName = localStorage.getItem("lastName");
+</script>
+  <p>
+  <label>Number</label>
+  <input class="w3-input" id="inputNumber" type="text"></p>
+  <script type="text/javascript">
+
+
+    // leer datos
+    
+</script>
+
+  <p>
+  <label>Relationship</label>
+  <input class="w3-input" id="inputRlShip" type="text"></p>
+  <script type="text/javascript">
+
+
+    // leer datos
+    var vRShip = localStorage.getItem("rlship");
+</script>
+</form>
+
+<a href="./index.html" id="download-button" onclick="fn1()" class="btn-large waves-effect waves-light orange">Crear</a>
+
+</body>
+</html> 

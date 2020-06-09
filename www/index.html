@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <title>Starter Template - Materialize</title>
@@ -12,48 +14,51 @@
 
 
     <script type="text/javascript">
+
+    function removeItem(){
+
+    var ul = document.getElementById("myList");
+    var candidate = document.getElementById("candidate");
+    
+    var item = document.getElementById(candidate.value);
+    alert(item);
+    ul.removeChild(item);
+}
+
+
     function fn2() {
       var vName = localStorage.getItem("nombre");
       var vLastName = localStorage.getItem("lastName");
       var vNumber = localStorage.getItem("number");
       var vRelationship = localStorage.getItem("rlship");
-
-      var ul = document.getElementById("dynamic-list");
-      var candidate = "vName";
-      var li = document.createElement("li");
-      li.setAttribute('id',vName.value);
-      li.appendChild(document.createTextNode(vName.value));
-      ul.appendChild(li);
-
-      alert("Valores: " +vName);
-
+        
+        var node = document.createElement("LI");
+        var textnode = document.createTextNode(vName);
+        node.appendChild(textnode);
+        document.getElementById("myList").appendChild(node); 
       
     }
     </script>
 
-    <script type="text/javascript">
-    function addItem(){
-    var ul = document.getElementById("dynamic-list");
-    var candidate = document.getElementById(vName);
-    var li = document.createElement("li");
-    li.setAttribute('id',candidate.value);
-    li.appendChild(document.createTextNode(candidate.value));
-    ul.appendChild(li);
-    }
-    </script>
 
 </head>
 <body>
+        
         <div id="home">
             <div class="w3-container w3-blue">
                 <h2>Agenda</h2>
             </div>
 
-            <ul id="dynamic-list"></ul>
+            <ul id="myList">
+            </ul>
             
             <div class="ui-content" role="main">
                  <a href="./crear.html" id="download-button" class="btn-large waves-effect waves-light orange">Nuevo Usuario</a>
                  <a id="download-button" onclick="fn2()" class="btn-large waves-effect waves-light orange">Actualizar Usuarios</a>
+
+                 <input type="text" id="candidate"/>
+
+                 <a id="download-button" onclick="removeItem()" class="btn-large waves-effect waves-light orange">Eliminar contacto</a>
             </div>
         </div>
 

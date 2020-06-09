@@ -14,7 +14,7 @@
     function fn1() {
 
       var x1 = document.getElementById("inputName").value;
-    // guardar datos
+      //nombres.push(x1);
       localStorage.setItem("nombre", x1);
 
       var x2 = document.getElementById("inputLName").value;
@@ -28,8 +28,6 @@
       var x4 = document.getElementById("inputRlShip").value;
     // guardar datos
       localStorage.setItem("rlship", x4);
-
-      alert("Valores: " +x1 + x2 + x3 + x4);
 
     }
   </script>
@@ -48,19 +46,12 @@
   <label>First Name</label>
   <input class="w3-input" id="inputName" type="text"></p>
   <script type="text/javascript">
-
-    // leer datos
-    var vName = localStorage.getItem("nombre");
   </script>
 
   <p>
   <label>Last Name</label>
   <input class="w3-input" id="inputLName" type="text"></p>
   <script type="text/javascript">
-
-
-    // leer datos
-    var vLName = localStorage.getItem("lastName");
 </script>
   <p>
   <label>Number</label>
@@ -76,10 +67,6 @@
   <label>Relationship</label>
   <input class="w3-input" id="inputRlShip" type="text"></p>
   <script type="text/javascript">
-
-
-    // leer datos
-    var vRShip = localStorage.getItem("rlship");
 </script>
 </form>
 
